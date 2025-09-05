@@ -23,5 +23,8 @@ bot.start((ctx) => {
 
 export async function handleUpdate(req: Request, res: Response) {
   await bot.handleUpdate(req.body as any, res);
-  res.status(200).end();
+  if (!res.headersSent) {
+    res.status(200).end();
+  }
 }
+
