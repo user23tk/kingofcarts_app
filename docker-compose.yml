@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  bot:
+    build: ./bot
+    environment:
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - TELEGRAM_SECRET_TOKEN=${TELEGRAM_SECRET_TOKEN}
+      - WEBHOOK_PATH_SECRET=${WEBHOOK_PATH_SECRET}
+      - PUBLIC_BASE_URL=${PUBLIC_BASE_URL}
+      - START_SIGNATURE_SECRET=${START_SIGNATURE_SECRET}
+      - ADMIN_KEY=${ADMIN_KEY}
+    volumes:
+      - ./data:/data
+      - ./content:/app/content
+  nginx:
+    build: ./nginx
+    depends_on:
+      - bot
+    ports:
+      - "8443:443"
+    volumes:
+      - ./nginx/certs:/etc/nginx/certs:rw
+    links:
+      - bot

@@ -1,0 +1,22 @@
+{
+  "title": "Il Trono al Neon",
+  "theme": "fantasy",
+  "scenes": [
+    {"text": "{{KING}} ti indica un sentiero tra foreste di cristallo.", "options":[{"id":"A","text":"Segui il bagliore","pp_delta":1,"goto":2},{"id":"B","text":"Indietreggia","pp_delta":-1,"goto":2}]},
+    {"text": "Il vento canta tra deserti di specchi."},
+    {"text": "Un portale di gelatina fluttua.", "options":[{"id":"A","text":"Attraversa","pp_delta":2,"goto":4},{"id":"B","text":"Osserva","pp_delta":0,"goto":4}]},
+    {"text": "Sembri sentire la voce dell'Ansia Parlante."},
+    {"text": "Pozioni arcobaleno ribollono.", "options":[{"id":"A","text":"Bevi","pp_delta":1,"goto":6},{"id":"B","text":"Rovescia","pp_delta":-2,"goto":6}]},
+    {"text": "Una Nebbia dell’Indifferenza avanza."},
+    {"text": "Davanti a te due troni al neon.", "options":[{"id":"A","text":"Siedi","pp_delta":2,"goto":8},{"id":"B","text":"Rifiuta","pp_delta":-1,"goto":8}]},
+    {"text": "Il cielo di gelatina esplode in colori."}
+  ],
+  "finale": {
+    "text": "{{PLAYER}} sente crescere il coraggio.",
+    "options": [
+      {"id":"A","text":"Abbraccia il destino","pp_delta":2},
+      {"id":"B","text":"Canta al cielo","pp_delta":0},
+      {"id":"C","text":"Cammina via","pp_delta":-2}
+    ]
+  }
+}
