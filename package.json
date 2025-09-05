@@ -1,0 +1,25 @@
+{
+  "name": "kingofcarts_bot",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "npm run build"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.8",
+    "better-sqlite3": "^9.4.1",
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.2",
+    "telegraf": "^4.16.2",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.30",
+    "typescript": "^5.4.2"
+  }
+}
