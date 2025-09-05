@@ -29,9 +29,9 @@ cp .env.example .env # edit values
 ./scripts/deploy_vps.sh user@host
 ```
 
-After deploy set webhook:
+After deploy set webhook (ensure `.env` is sourced or variables are set inline):
 ```bash
-TELEGRAM_BOT_TOKEN=... PUBLIC_BASE_URL=https://yourdomain WEBHOOK_PATH_SECRET=... TELEGRAM_SECRET_TOKEN=... ./scripts/set_webhook.sh
+TELEGRAM_BOT_TOKEN=... PUBLIC_BASE_URL=https://yourdomain:8443 WEBHOOK_PATH_SECRET=... TELEGRAM_SECRET_TOKEN=... ./scripts/set_webhook.sh
 ```
 
 If using self-signed certs, include `certificate` parameter when calling `setWebhook`.
